@@ -83,7 +83,7 @@ const SearchBar = () => {
          style={{
           overlay: {
             zIndex:100
-          },
+          }
         }}
         >
           {/* <LoginModal/> */}
