@@ -51,9 +51,10 @@ const MainPageBanners = () => {
                                 className="group relative flex w-full items-center  border-0 p-3 text-left text-base text-black transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none "
                                 type="button"
                                 data-te-collapse-init
-                                data-te-target="#collapseOne"
-                                aria-expanded="true"
-                                aria-controls="collapseOne">
+                                data-te-collapse-collapsed
+                                data-te-target="#collapse1"
+                                aria-expanded="false"
+                                aria-controls="collapse1">
                                 Top Banner
                                 <span
                                     className="ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:rotate-0 motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
@@ -73,11 +74,11 @@ const MainPageBanners = () => {
                             </button>
                         </h2>
                         <div
-                            id="collapseOne"
-                            className="!visible"
+                            id="collapse1"
+                            className="!visible hidden"
                             data-te-collapse-item
-                            data-te-collapse-show
-                            aria-labelledby="headingOne"
+                            // data-te-collapse-show
+                            aria-labelledby="heading1"
                             data-te-parent="#accordionExample">
                             <div className="w-full m-2">
                                 <form className="flex">

@@ -102,7 +102,7 @@ const EventsPage = () => {
       <div>
         <HeadingSection heading={heading} preview={false} stat={false} />
         <BulkAction setBulkAction={setBulkAction} handleBulkAction={handleBulkAction} />
-        <DashboarDataTable data={eventData} dataArr={dataArr} setDataArr={setDataArr} dataStructure={dataStructure} tableStats={tableStats} sortBy={sortBy} updateLink="/admin-panel/events/update/"/>
+        <DashboarDataTable data={eventData} dataArr={dataArr} setDataArr={setDataArr} dataStructure={dataStructure} tableStats={tableStats} sortBy={sortBy} updateLink="/admin-panel/events/"/>
       </div>
     )
     

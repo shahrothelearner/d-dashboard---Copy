@@ -1,41 +1,98 @@
 'use client'
-import { SubCategoryTable } from "sub-components"
-import {BsCheck2 } from 'react-icons/bs';
-import {MdAddCircle} from 'react-icons/md';
-import {GrUnorderedList} from 'react-icons/gr';
-import {TbCategory} from 'react-icons/tb';
-import Link from "next/link";
+import { useState } from 'react'
+import DashboarDataTable from '@/components/dashboard/DashboarDataTable'
+import HeadingSection from '@/components/dashboard/HeadingSection'
+import BulkAction from '@/components/dashboard/BulkAction'
+import SubCategoryData from '@/data/dashboard/SubCategoryData';
+import { totallength, totalElements } from '@/components/dashboard/functions/FnTableStats';
 
+const dataStructure = [
+  {
+    th: "Title",
+    td: "articleTitle",
+  },
+  {
+    th: "Date & Time",
+    td: "date"
+  },
+  {
+    th: "Category Name",
+    td: "CategoryName"
+  },
+  {
+    th: "SubCategory Name",
+    td: "SubCategoriesName"
+  },
+  {
+    th: "Tags",
+    td: "tags"
+  },
+  {
+    th: "Viewers",
+    td: "viewers"
+  },
+  {
+    th: "Bookmarks",
+    td: "bookmarks"
+  },
 
-const SubCategoryPage = ({params}) => {
+]
+const tableStats = [{
+  type: "All",
+  func: totallength(SubCategoryData ),
+},
+{
+  type: "Active",
+  func: totalElements(SubCategoryData , "status", "Active")
+},
+
+{
+  type: "Drafts",
+  func: totalElements(SubCategoryData , "status", "Drafts"),
+},
+{
+  type: "Deleted",
+  func: totalElements(SubCategoryData , "status", "Delete"),
+},
+]
+const sortBy=[
+  { name:"Name",  //frontend value
+    value:"username" //backend name
+  },
+  { name:"Date",  //frontend value
+    value:"date" //backend name
+  },
+  { name:"Active",  //frontend value
+    value:"active" //backend name
+  },
+  { name:"In-Active",  //frontend value
+    value:"inactive" //backend name
+  },
+  ]
+
+const SubCategoriesPage = ({params}) => {
+  const [bulkAction, setBulkAction] = useState();
+  const [dataArr, setDataArr] = useState(SubCategoryData);
   let categoryName = decodeURIComponent(params.subcategory)
-  return (
-    <div  className="container fluid mb-20">
-    <div>
-        <div className="d-flex m-3 align-middle ">
-          <h1 className="m-3 align-middle text-capitalize">{categoryName}</h1>
-          <button type="button" style={{height:"40px"}} className="btn btn-success my-3 mx-1 align-middle rounded-0 d-flex  justify-content-between rounded"><MdAddCircle size={20}/>Add New Article</button>
-          <Link href={"/categories"}><button type="button" style={{height:"40px"}} className="btn btn-warning my-3 mx-1 align-middle rounded-0 d-flex  text-white justify-content-between rounded"><TbCategory size={20}/>Live Preview</button></Link>
-          <button type="button" style={{height:"40px"}} className="btn btn-primary my-3 mx-1 align-middle rounded-0 d-flex justify-content-between rounded" ><GrUnorderedList size={20}/>Stats</button>
-        </div>
-        <div className="d-flex m-0">
-        <select className="py-2 border-0" id="bulk-action">
-          <option>Bulk Action</option>
-          <option>Activate Selected</option>
-          <option>Deactivate Selected</option>
-          <option>Delete Selected</option>
-        </select>
-        <button type="button" style={{height:"40px"}}  className="btn btn-warning align-middle text-white rounded-0"><BsCheck2 size={20}/>Apply</button>
-        <div className="bg-white rounded-5 px-3 py-2 ms-8"> Status: <span className="text-green">Active</span></div>
-        <div className="bg-white rounded-5 px-3 py-2 ms-2"> Viewers: <span className="text-green">270/350</span></div>
 
-        </div>
-    </div>
+  
+const heading = {
+  heading: categoryName,
+  btntext: "Add New Sub-Category",
+  to: "/admin-panel/categories/sub-categories/addnew-subcategory",
+}
+  const handleBulkAction = () => {
+    console.log(bulkAction)
+  }
+  return (
     <div>
-        <SubCategoryTable categoryName={categoryName}/>
+      <HeadingSection heading={heading} preview={false} stat={true} order={true}/>
+      <BulkAction setBulkAction={setBulkAction} handleBulkAction={handleBulkAction} />
+      <DashboarDataTable data={SubCategoryData} dataArr={dataArr} setDataArr={setDataArr} dataStructure={dataStructure} tableStats={tableStats} sortBy={sortBy} updateLink="/admin-panel/categories/sub-categories/" />
     </div>
-</div>
+
+
   )
 }
 
-export default SubCategoryPage
+export default SubCategoriesPage

@@ -106,7 +106,7 @@ const CoursePage = () => {
       <div>
         <HeadingSection heading={heading} preview={false} stat={false} />
         <BulkAction setBulkAction={setBulkAction} handleBulkAction={handleBulkAction} />
-        <DashboarDataTable data={CoursesData} dataArr={dataArr} setDataArr={setDataArr} dataStructure={dataStructure} tableStats={tableStats} sortBy={sortBy} updateLink="/admin-panel/courses/update/"/>
+        <DashboarDataTable data={CoursesData} dataArr={dataArr} setDataArr={setDataArr} dataStructure={dataStructure} tableStats={tableStats} sortBy={sortBy} updateLink="/admin-panel/courses/"/>
       </div>
     )
     

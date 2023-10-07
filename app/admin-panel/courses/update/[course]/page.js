@@ -19,7 +19,6 @@ const Coursepage = ({params}) => {
 
 
     const dataForUpdate =CoursesData.find(key=> key._id == params.course)
-    console.log(dataForUpdate)
     return (
         <div style={{ width: "100%", maxWidth: "1100px", margin: "auto" }}>
             <h1 className="w-full my-10 text-lg font-bold flex items-center gap-2"><SiBookstack size={30} />Update Course</h1>

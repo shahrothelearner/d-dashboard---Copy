@@ -20,15 +20,16 @@ const SideBarMenu = () => {
     return (
         <div id="accordionExample" className='h-screen max-w-[400px] w-full bg-black/90 animate-[widthAnimation_0.3s_ease-in-out_forwards] block px-10 relative z-[10000]'>
             <div className='w-[150px] relative z-[10000000000]'>
-                <h2 className="mb-0 py-[10px]" >Dashboard</h2>
-                <h2 className="mb-0" id="headingOne">
+                <h2 className="mb-0 py-[10px]"><Link href={"/admin-panel"}>Dashboard</Link></h2>
+                <h2 className="mb-0" id="heading1">
                     <button
                         className="group relative flex w-full items-center  border-0 py-3 text-left text-base text-white transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none "
                         type="button"
                         data-te-collapse-init
-                        data-te-target="#collapseOne"
-                        aria-expanded="false"
-                        aria-controls="collapseOne">
+                        data-te-collapse-collapsed
+                        data-te-target="#collapse1"
+                        aria-expanded="true"
+                        aria-controls="collapse1">
                         Courses
                         <span
                             className="ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:rotate-0 motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
@@ -48,11 +49,11 @@ const SideBarMenu = () => {
                     </button>
                 </h2>
                 <div
-                    id="collapseOne"
-                    className="!visible"
+                    id="collapse1"
+                    className="!visible hidden"
                     data-te-collapse-item
                     data-te-collapse-show
-                    aria-labelledby="headingOne"
+                    aria-labelledby="heading1"
                     data-te-parent="#accordionExample">
                     <div className="p-2 flex flex-col gap-2">
                          <Link className="cursor-pointer"href="/admin-panel/courses">All Courses</Link>

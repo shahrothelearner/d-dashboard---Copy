@@ -12,7 +12,7 @@ import FnCheckBox from '@/components/dashboard/functions/FnCheckBox';
 
 
 
-const DashboarDataTable = ({ data, dataArr, setDataArr, dataStructure, tableStats, sortBy, updateLink, subCatLink }) => {
+const DashboarDataTable = ({ data, dataArr, setDataArr, dataStructure, tableStats, sortBy, updateLink, subCatLink, categoryName }) => {
     const [query, setQuery] = useState([]);
     useEffect(() => {
 
@@ -48,37 +48,35 @@ const DashboarDataTable = ({ data, dataArr, setDataArr, dataStructure, tableStat
                                 {dataStructure.map((element, i) => {
                                     return (
                                         <td key={i} className="px-3 border-b-2 relative text-center">
-                                            {(() => {
-                                                if (element.td === "name") {
-                                                    return <Link href={"/admin-panel/categories/" + item[element.td]}>{item[element.td]}</Link>
-                                                } if (element.td === "date") {
-                                                    return <div>{item.date} <br />  {item.time}</div>
-                                                } if (element.td === "viewers") {
-                                                    return item.viewersR + "/" + item.viewersF
-                                                }
-                                                if (element.td === "users") {
-                                                    return (
-                                                        <div className=' ml-[-15px] relative'>
-                                                            {item[element.td].slice(0, 3).map((e, i) => {
-                                                                return (
+                                            {element.td === "name" ?
+                                                <Link href={"/admin-panel/categories/" + item[element.td]}>{item[element.td]}</Link>
+                                                : element.td === "SubCategoriesName" ?
+                                                    <Link href={"/admin-panel/categories/" + categoryName + "/" + item[element.td]}>{item[element.td]}</Link>
+                                                    : element.td === "date" ?
+                                                        <div>{item.date} <br />  {item.time}</div>
+                                                        : element.td === "viewers" ?
+                                                            item.viewersR + "/" + item.viewersF
+                                                            : element.td === "users" ?
+                                                                <div className=' ml-[-15px] relative'>
+                                                                    {item[element.td].slice(0, 3).map((e, i) => {
+                                                                        return (
+                                                                            <div key={i} className='ml-[-15px] relative inline-block hover:z-[3] cursor-pointer'>
+                                                                                <Image src={e.image} width={30} height={30} alt={item.title} className="object-cover rounded-[50%] border-spacing-1 border" />
+                                                                            </div>
+                                                                        )
+                                                                    })}
+                                                                    {item[element.td].length > 2 && <span className='justifyl-center border-4 rounded-[50%]  items-center p-1 ml-[-15px] mb-[] bg-white z-[2] absolute text-xs'>+{item[element.td].length - 2}</span>}
+                                                                </div>
 
-                                                                    <div className='ml-[-15px] relative inline-block hover:z-[3] cursor-pointer'>
-                                                                        <Image src={e.image} width={30} height={30} alt={item.title} className="object-cover rounded-[50%] border-spacing-1 border" />
-                                                                    </div>
-                                                                )
-                                                            })}
-                                                            {item[element.td].length > 2 && <span className='justifyl-center border-4 rounded-[50%]  items-center p-1 ml-[-15px] mb-[] bg-white z-[2] absolute text-xs'>+{item[element.td].length - 2}</span>}
-                                                        </div>
-                                                    )
-                                                }
-                                                if (element.td === "image") {
-                                                    return <Image src={item.image} alt={item.title} width={40} height={40} />
-                                                } if (element.td === "teachers") {
-                                                    return item[element.td].map((e, i) => { return (<span key={i} >{e.name}, </span>) })
-                                                } else {
-                                                    return item[element.td]?.length > 100 ? item[element.td].slice(0, 100) + "..." : item[element.td]
-                                                }
-                                            })()}
+                                                                : element.td === "image" ?
+                                                                    <Image src={item.image} alt={item.title} width={40} height={40} />
+                                                                    : element.td === "teachers" ?
+                                                                        item[element.td].map((e, i) => { return (<span key={i} >{e.name}, </span>) })
+                                                                        :
+                                                                        item[element.td]?.length > 100 ? item[element.td].slice(0, 100) + "..."
+                                                                            : item[element.td]
+
+                                            }
                                         </td>
                                     )
                                 })}

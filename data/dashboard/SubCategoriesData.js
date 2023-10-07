@@ -1,7 +1,7 @@
 export const SubCategoriesData = [
     {
        id:1,
-       SubCatName : "sub-categories1",
+       SubCategoriesName : "sub-categories1",
        date: "12-dec-22",
        time:"12:00am",
        seoScore: 75,//
@@ -23,7 +23,7 @@ export const SubCategoriesData = [
     },
     {
         id:2,
-        SubCatName : "sub-categories2",
+        SubCategoriesName : "sub-categories2",
         date: "12-nov-22",
         time:"12:00am",
         seoScore: 75,
@@ -45,7 +45,7 @@ export const SubCategoriesData = [
      },
      {
         id:3,
-        SubCatName : "sub-categories3",
+        SubCategoriesName : "sub-categories3",
         date: "12-dec-22",
         time:"12:00am",
         seoScore: 75,
@@ -67,7 +67,7 @@ export const SubCategoriesData = [
      },
      {
         id:4,
-        SubCatName : "sub-categories4",
+        SubCategoriesName : "sub-categories4",
         date: "12-dec-22",
         time:"12:00am",
         seoScore: 75,
@@ -89,7 +89,7 @@ export const SubCategoriesData = [
      },
      {
         id:5,
-        SubCatName : "sub-categories5",
+        SubCategoriesName : "sub-categories5",
         date: "12-dec-22",
         time:"12:00am",
         seoScore: 75,
@@ -111,7 +111,7 @@ export const SubCategoriesData = [
      },
      {
         id:6,
-        SubCatName : "sub-categories6",
+        SubCategoriesName : "sub-categories6",
         date: "12-dec-22",
         time:"12:00am",
         seoScore: 75,
