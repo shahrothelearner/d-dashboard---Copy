@@ -1,0 +1,226 @@
+.category-page{
+    width: 100%;
+    margin: auto;
+    /* gap:20px; */
+    
+}
+.cat-heading{
+    font-family: "Proxima Nova Condensed","Proxima Nova Condensed fallback", sans-serif;
+    /* margin-top: 70px; */
+    font-size: 70px;
+    line-height: 74px;
+    word-spacing: 0px;
+    text-decoration: none solid rgb(35,31,32);
+    font-weight: 700;
+    padding: 140px 0 0px;
+    text-align: center;
+}
+.category-cards{
+    max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: left;
+    gap: 20px;
+}
+.cat-card{
+    width: 335px;
+    height: 450px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 30px auto;
+    background-color:white;
+    position: relative;
+    /* border: 1px solid black; */
+}
+.cat-card Img{
+    width: 100%;
+    height: 180px;
+}
+.cat-card h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.cat-card-des{
+    padding: 30px 20px;
+}
+.cat-card p{
+    font-size: 17px;
+    line-height: 26px;
+}
+.cat-card span{
+    display: flex;
+    font-size: 16px;
+    /* font-family: Proxima Nova; */
+    font-weight: 600;
+    line-height: 20px;
+    color: #02838d;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 5%;
+}
+.cat-card span:hover{
+    color: #db1f88;
+}
+.sub-cat-banner{
+    line-height: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 2000px;
+    margin-bottom: 25px;
+    position: relative;
+    height: 300px;
+    /* z-index: 1; */
+}
+.banner-heading{
+    position: absolute;
+    margin: auto;
+    z-index: 1;
+    color: white;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    top: 40%;
+    text-transform: uppercase;
+}
+.banner-heading h1{
+    font-size: 38px;
+    line-height: 42px;
+    margin: 0 0 10px 0;
+}
+.banner-heading p{
+    /* line-break: anywhere; */
+    /* display: block;
+    word-wrap: break-word; */
+    width: 40%; 
+    /* overflow-wrap: break-word; */
+    height: 100px;
+    /* background-color: black; */
+    padding: 20px;
+}
+.article-section{
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    height: 600px;
+    margin: 40px auto;
+}
+.first-section{
+    width: 50%;
+    height: 100%;
+    margin-right: 30px;
+
+}
+.second-section{
+
+    width: 50%;
+    height: 100%;
+
+
+}
+.container{
+    width: 100%;
+    height: 100%;
+    
+    /* background-color: rgb(181, 245, 5); */
+    /* margin: 30px auto 10px;   */
+    display: block;
+    /* box-shadow: 1px 2px 4px black; */
+}
+.card{
+    width: 100%; 
+    height: 70%;
+    position: relative;
+}
+.title-des{
+    text-align: left;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.title-des h1{
+    cursor: pointer;
+    text-decoration: none;
+    border-color: currentColor;
+    color: #02838d;
+    color: inherit;
+    font-family: "Proxima Nova Condensed","Proxima Nova Condensed Fallback",sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+    color: #231f20;
+    margin: 0;
+    font-size: 30px;
+    line-height: 34px;
+}
+.card2{
+    display: flex;
+    /* justify-content: space-between; */
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    /* align-items: center; */
+    /* padding: 30px 0px 30px 20px; */
+    padding-bottom: 20px;
+}
+.card2 h4{
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 500;
+}
+.card2 p{
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 10px;
+}
+
+.card2-img{width: 30%; height: 150px;
+position: relative;}
+.card2-text{width: 70%; height: 100%;padding-left: 20px;}
+.categories-menu{
+    height: 50px;
+    width: 100vw;
+    align-items: center;
+    text-align: center;
+    /* box-shadow: 1px 2px black; */
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    box-shadow: 1px 0px 1px black;}
+.categories-menu a{    background-color: blue;
+    box-shadow: 1px 2px rgb(136, 136, 236);
+    padding: 5px;
+    margin-left: 5px;}
+
+    .course-card-1st-block{
+        position: relative;
+        height: 180px;
+        /* z-index: 1; */
+    }
+.all-articles{
+    max-width: 1100px;
+    width: 100%;
+    overflow-x: hidden;
+}
+.article-content{
+    width: 90%;
+    display: flex;
+    margin: auto;
+}
+.article-left-content{
+    width: 70%;
+}
+.article-right-content{
+    width: 30%;
+}
+.article-image{
+    position: relative;
+}

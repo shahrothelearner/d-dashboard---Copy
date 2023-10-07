@@ -1,0 +1,175 @@
+/* .container{
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    height: auto;
+} */
+/* .nf-banner-heading{
+    margin: 5rem;
+    width: 60%;
+   
+}
+.nf-banner-heading h1{
+    font-size: 3rem;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 20px;
+} */
+/* .nf-banner-img{
+    width: 40%;
+    height: 300px;
+    padding: 30px 30px;
+    position: relative;
+    margin-right: 5%;
+    margin-top: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.nf-section01{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    color:  rgb(162, 156, 156);
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+.nf-section01 h2{
+    font-size: 23px;
+    font-weight: 600;
+}
+.nf-section01 h3{
+    font-size: 20px;
+    font-weight: 600;
+}   
+.nf-section01 p{
+    font-size: 14px;
+    color:  rgb(162, 156, 156);
+}
+.nf-section01-col{
+    width: 27%;
+    border-left: 2px solid rgb(0, 123, 255);
+    padding:0 10px 0 30px;
+
+}
+.nf-section02{
+    width: 90%;
+    text-align: center; 
+    padding: 30px 0;
+    margin: auto auto 30px auto;
+}
+
+.nf-section02 h1{
+    font-weight: 700;
+    font-size: 30px;
+    margin: 20px auto;
+}
+.nf-section02 p{
+    color:  rgb(162, 156, 156);
+    font-size: 20px;
+    line-height: 22px;
+}
+.nf-section03{
+    width: 90%;
+    margin: auto;
+    height: auto;
+    margin-bottom: 30px;
+} 
+.nf-section03 h3{
+    color: rgb(0, 123, 255);
+    font-size: 20px;
+    font-weight: 600;
+}
+.nf-section03 h1{
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.nf-section03-options{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.nfcard{
+    margin: 10px 10px 10px 0px;
+    display: flex;  
+    width: 320px;
+    padding: 10px 20px;
+    border: 1px solid rgb(162, 156, 156, 0.5);
+    align-items: center;
+}
+.nfcard-first-block{
+    width: 20%;
+    align-items: center;
+    text-align: center;
+}
+.nfcard-second-block h3{
+    color: black;
+}
+.nfcard p{
+    color: rgb(162, 156, 156);
+}
+/* .nfcard-first-block i{
+    color:rgb(0, 123, 255);
+} */
+/* .nfcard-last{
+    color: white;
+    background-color: black;
+    margin: 10px 10px 10px 0px;
+    display: flex;  
+    width: 320px;
+    padding: 10px 20px;
+    border: 1px solid rgb(162, 156, 156, 0.5);
+    align-items: center;
+} */
+/* .nfcard-last h2{
+    font-size: 30px;
+    color: white;
+    font-weight: 200;
+}
+.nfcard-last h3, p{
+    color: white;
+}
+.nfsection4-header{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+
+} */
+/* .nfsection4-header span{
+    font-size: 40px;
+    font-weight: 600;
+    padding-right: 30px;
+}
+.nfsection4-header i{
+    gap: 25px;
+    display: flex;
+    color: white;
+    cursor: pointer;
+}
+.nfsection4-content{
+    max-width: 1100px;
+    width: 90%;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+} */
+/* .section4-links{
+    margin: 20px auto;
+    line-height: 35px;
+    width: 20%;
+    text-align: left;
+}
+.nfsection4-content h3{
+    font-size: 20px;
+    font-weight: 600;
+}
+.nfsection4-content p{
+    color: black;
+}  */
