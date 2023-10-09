@@ -218,8 +218,8 @@ const SideBarMenu = () => {
                     aria-labelledby="headingFive"
                     data-te-parent="#accordionExample">
                     <div className="p-2 flex flex-col gap-2">
-                         <Link className="cursor-pointer"href="#">All Stories</Link>
-                         <Link className="cursor-pointer"href="#">Add Story</Link>
+                         <Link className="cursor-pointer"href="/admin-panel/stories">All Stories</Link>
+                         <Link className="cursor-pointer"href="/admin-panel/stories/addnew-story">Add Story</Link>
                     </div>
                 </div>
             </div>
